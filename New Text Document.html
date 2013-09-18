@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>test</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+<style>
+<!--
+
+.master-template-aside {
+    min-height: 300px;
+    background-color: #FF8004;
+    padding: 1.5em 0;
+}
+-->
+</style>
+</head>
+<body>
+
+	<aside class="master-template-aside fourcol first">
+		<div class="template-header-main">
+			<div class="template-header-second"> </div>
+			<div class="template-header-price template-header-main"> </div>
+		</div>
+	</aside>
+
+	<div class="threecol hotel-price">
+		<script>
+			$( document ).ready(function() {
+				var color = $('.master-template-aside').css( "background-color" );
+				alert(color);
+				$('.hotel-price-amount').css( 'color', color );
+				//var color2 = $('.hotel-price-amount').css( 'background-color' );
+				//alert(color2);
+			});
+		</script>
+		<p><em>top copy<br /></em></p>
+		<!-- jquery to detect background color of .master-template-aside and apply it to price -->
+		<p class="hotel-price-amount">$100</p>
+		<p>bottom copy</p>
+		<p class="hotel-price-was-amount"><strong>
+			<span style="text-decoration: line-through;">
+				WAS:$1000
+			</span>
+		</strong></p>		
+	</div>
+</body>
+</html>
